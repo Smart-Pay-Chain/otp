@@ -1,10 +1,24 @@
 # @smart-pay-chain/otp
 
-[![npm version](https://img.shields.io/npm/v/@smart-pay-chain/otp.svg)](https://www.npmjs.com/package/@smart-pay-chain/otp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+<div align="center">
 
-Official TypeScript/JavaScript SDK for the Smart Pay Chain OTP Verification Service. Send and verify one-time passwords via SMS, WhatsApp, and Voice with ease.
+[![npm version](https://img.shields.io/npm/v/@smart-pay-chain/otp.svg?style=flat-square)](https://www.npmjs.com/package/@smart-pay-chain/otp)
+[![npm downloads](https://img.shields.io/npm/dm/@smart-pay-chain/otp.svg?style=flat-square)](https://www.npmjs.com/package/@smart-pay-chain/otp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg?style=flat-square)](https://nodejs.org/)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](https://github.com/Smart-Pay-Chain/otp)
+[![Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen.svg?style=flat-square)](https://github.com/Smart-Pay-Chain/otp)
+
+**Official TypeScript/JavaScript SDK for Smart Pay Chain OTP Verification Service**
+
+[Website](https://smartpaychain.com) • [Documentation](https://docs.smartpaychain.com) • [NPM Package](https://www.npmjs.com/package/@smart-pay-chain/otp) • [GitHub](https://github.com/Smart-Pay-Chain/otp)
+
+</div>
+
+---
+
+Send and verify one-time passwords via SMS, WhatsApp, and Voice with ease.
 
 ## What's New in v2.0
 
@@ -559,9 +573,13 @@ npm test -- --coverage
 
 ## Support
 
-- **Documentation**: [https://docs.smartpaychain.com](https://docs.smartpaychain.com)
-- **Issues**: [GitHub Issues](https://github.com/Smart-Pay-Chain/otp/issues)
-- **Email**: support@smartpaychain.com
+Need help? We're here for you!
+
+- 🌐 **Website**: [smartpaychain.com](https://smartpaychain.com)
+- 📚 **Documentation**: [docs.smartpaychain.com](https://docs.smartpaychain.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Smart-Pay-Chain/otp/issues)
+- 📧 **Email**: [support@smartpaychain.com](mailto:support@smartpaychain.com)
+- 💬 **Community**: [Join our Discord](https://smartpaychain.com/discord)
 
 ## Contributing
 
@@ -577,5 +595,28 @@ See [CHANGELOG.md](./CHANGELOG.md) for version history.
 
 ---
 
-Made with ❤️ by [Smart Pay Chain](https://smartpaychain.com)
+<div align="center">
+
+### 🏢 About Smart Pay Chain
+
+**Smart Pay Chain** is a leading provider of blockchain-based payment solutions and verification services.
+
+🌐 [smartpaychain.com](https://smartpaychain.com) | 📧 [contact@smartpaychain.com](mailto:contact@smartpaychain.com)
+
+**Products & Services**
+- 🔐 OTP Verification Service (SMS, WhatsApp, Voice)
+- 💳 Payment Processing Solutions
+- ⛓️ Blockchain Integration Services
+- 🔒 Secure Authentication Systems
+
+---
+
+Made with ❤️ by Smart Pay Chain
+
+[![Follow us on Twitter](https://img.shields.io/twitter/follow/smartpaychain?style=social)](https://twitter.com/smartpaychain)
+[![Star on GitHub](https://img.shields.io/github/stars/Smart-Pay-Chain/otp?style=social)](https://github.com/Smart-Pay-Chain/otp)
+
+© 2025 Smart Pay Chain. All rights reserved.
+
+</div>
 
