@@ -1,0 +1,70 @@
+{
+  "name": "@smart-pay-chain/otp",
+  "version": "2.0.1",
+  "description": "Official TypeScript SDK for Smart Pay Chain OTP Verification Service - Now with test mode, mobile examples, and enhanced error handling",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prebuild": "npm run test",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"examples/**/*.ts\" \"tests/**/*.ts\"",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "keywords": [
+    "otp",
+    "one-time-password",
+    "verification",
+    "authentication",
+    "2fa",
+    "two-factor",
+    "sms",
+    "whatsapp",
+    "voice",
+    "sdk",
+    "typescript",
+    "smart-pay-chain",
+    "smartpaychain",
+    "mobile",
+    "react-native",
+    "passwordless",
+    "phone-auth",
+    "test-mode",
+    "idempotency"
+  ],
+  "author": "Smart Pay Chain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smart-Pay-Chain/otp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Smart-Pay-Chain/otp/issues"
+  },
+  "homepage": "https://github.com/Smart-Pay-Chain/otp#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.2"
+  }
+}

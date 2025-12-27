@@ -1,0 +1,32 @@
+# Source files
+src/
+tests/
+examples/
+
+# Config files
+tsconfig.json
+jest.config.js
+.eslintrc.js
+.prettierrc
+
+# Git
+.git/
+.gitignore
+
+# Documentation (keep README and LICENSE)
+CONTRIBUTING.md
+PUBLISHING.md
+
+# Development
+*.log
+.DS_Store
+node_modules/
+coverage/
+
+# Testing
+*.test.ts
+*.spec.ts
+
+# CI/CD
+.github/
+
