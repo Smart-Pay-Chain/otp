@@ -1,6 +1,6 @@
-# @smartpaychain/otp-sdk
+# @smart-pay-chain/otp
 
-[![npm version](https://img.shields.io/npm/v/@smartpaychain/otp-sdk.svg)](https://www.npmjs.com/package/@smartpaychain/otp-sdk)
+[![npm version](https://img.shields.io/npm/v/@smart-pay-chain/otp.svg)](https://www.npmjs.com/package/@smart-pay-chain/otp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
 
@@ -32,19 +32,19 @@ Official TypeScript/JavaScript SDK for the Smart Pay Chain OTP Verification Serv
 ## Installation
 
 ```bash
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 ```
 
 or
 
 ```bash
-yarn add @smartpaychain/otp-sdk
+yarn add @smart-pay-chain/otp
 ```
 
 ## Quick Start
 
 ```typescript
-import { OtpClient, OtpChannel } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel } from '@smart-pay-chain/otp';
 
 // Initialize the client
 const client = new OtpClient({
@@ -110,7 +110,7 @@ if (testMode) {
 }
 
 // Use test phone numbers
-import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 const result = await client.sendOtp({
   phoneNumber: TEST_PHONE_NUMBERS.SUCCESS, // +15005550006
@@ -283,7 +283,7 @@ import {
   RateLimitError,
   OtpExpiredError,
   InvalidOtpError,
-} from '@smartpaychain/otp-sdk';
+} from '@smart-pay-chain/otp';
 
 try {
   const result = await client.verifyOtp({ ... });
