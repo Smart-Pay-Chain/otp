@@ -5,15 +5,15 @@
 ### Installation
 
 ```bash
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 # or
-yarn add @smartpaychain/otp-sdk
+yarn add @smart-pay-chain/otp
 ```
 
 ### Quick Start
 
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({
   apiKey: process.env.OTP_API_KEY,

@@ -1,4 +1,4 @@
-# Contributing to @smartpaychain/otp-sdk
+# Contributing to @smart-pay-chain/otp
 
 Thank you for your interest in contributing to the Smart Pay Chain OTP SDK! We welcome contributions from the community.
 

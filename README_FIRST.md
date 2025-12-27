@@ -1,6 +1,6 @@
 # 📖 START HERE - OTP SDK v2.0
 
-Welcome to @smartpaychain/otp-sdk v2.0! This file will help you get oriented.
+Welcome to @smart-pay-chain/otp v2.0! This file will help you get oriented.
 
 ## 🎯 What is This Package?
 
@@ -16,10 +16,10 @@ A production-ready npm package for sending and verifying OTPs (one-time password
 
 ```bash
 # Install
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 
 # Use
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({ apiKey: 'your-key' });
 
@@ -149,16 +149,16 @@ otp/
 
 ```typescript
 // Install
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 
 // Use
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 const client = new OtpClient({ apiKey: 'your-key' });
 await client.sendOtp({ phoneNumber: '+995...' });
 await client.verifyOtp({ requestId, code });
 
 // Test Mode
-import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 await client.sendOtp({ phoneNumber: TEST_PHONE_NUMBERS.SUCCESS });
 await client.verifyOtp({ requestId, code: TEST_OTP_CODE });
 ```

@@ -1,10 +1,10 @@
-# @smartpaychain/otp-sdk - Package Summary
+# @smart-pay-chain/otp - Package Summary
 
 ## 📦 Package Overview
 
 A production-ready npm package for consuming the Smart Pay Chain OTP Verification Service. This SDK provides a clean, type-safe API for sending and verifying one-time passwords via SMS, WhatsApp, and Voice.
 
-**Package Name**: `@smartpaychain/otp-sdk`  
+**Package Name**: `@smart-pay-chain/otp`  
 **Version**: 1.0.0  
 **License**: MIT  
 **Repository**: https://github.com/Smart-Pay-Chain/otp
@@ -154,7 +154,7 @@ npm run format
 ## 📚 Usage Example
 
 ```typescript
-import { OtpClient, OtpChannel } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({
   apiKey: 'your-api-key',
@@ -212,7 +212,7 @@ console.log(verification.success); // true
 ## 📖 Next Steps
 
 1. **Get API Key** - Sign up at https://dashboard.smartpaychain.com
-2. **Install Package** - `npm install @smartpaychain/otp-sdk`
+2. **Install Package** - `npm install @smart-pay-chain/otp`
 3. **Read Quick Start** - See [QUICKSTART.md](./QUICKSTART.md)
 4. **Try Examples** - Check [examples/](./examples/)
 5. **Deploy** - Integrate into your application

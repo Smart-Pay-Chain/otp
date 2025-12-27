@@ -1,6 +1,6 @@
 # OTP SDK Examples
 
-This directory contains various examples demonstrating how to use the @smartpaychain/otp-sdk in different scenarios.
+This directory contains various examples demonstrating how to use the @smart-pay-chain/otp in different scenarios.
 
 ## Examples
 

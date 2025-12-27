@@ -2,7 +2,7 @@
 
 ## ✅ All Updates Successfully Implemented
 
-The @smartpaychain/otp-sdk package has been successfully updated to v2.0.0 with all latest features from the core sms-service.
+The @smart-pay-chain/otp package has been successfully updated to v2.0.0 with all latest features from the core sms-service.
 
 ---
 
@@ -87,7 +87,7 @@ The @smartpaychain/otp-sdk package has been successfully updated to v2.0.0 with 
 
 ### 1. Test Mode Support
 ```typescript
-import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 const testMode = await client.isTestMode();
 if (testMode) {

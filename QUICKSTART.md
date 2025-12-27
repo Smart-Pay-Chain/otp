@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get started with @smartpaychain/otp-sdk v2.0 in 5 minutes!
+Get started with @smart-pay-chain/otp v2.0 in 5 minutes!
 
 ## What's New in v2.0
 
@@ -13,7 +13,7 @@ Get started with @smartpaychain/otp-sdk v2.0 in 5 minutes!
 ## Installation
 
 ```bash
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 ```
 
 ## Basic Usage
@@ -21,7 +21,7 @@ npm install @smartpaychain/otp-sdk
 ### 1. Initialize the Client
 
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({
   apiKey: 'your-api-key-here',
@@ -71,7 +71,7 @@ Perfect for development and automated testing!
 ### 1. Check if Test Mode is Enabled
 
 ```typescript
-import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({
   apiKey: process.env.OTP_API_KEY,
@@ -124,7 +124,7 @@ await client.verifyOtp({
 ### 1. Backend Setup (Express.js)
 
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const otpClient = new OtpClient({
   apiKey: process.env.OTP_API_KEY,
@@ -178,7 +178,7 @@ const verifyOtp = async (requestId: string, code: string) => {
 ## Complete Example
 
 ```typescript
-import { OtpClient, OtpChannel, OtpError } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel, OtpError } from '@smart-pay-chain/otp';
 
 async function verifyPhoneNumber(phoneNumber: string, userCode: string) {
   const client = new OtpClient({
@@ -269,7 +269,7 @@ import {
   InvalidOtpError,
   OtpExpiredError,
   RateLimitError,
-} from '@smartpaychain/otp-sdk';
+} from '@smart-pay-chain/otp';
 
 try {
   await client.verifyOtp({ ... });

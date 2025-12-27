@@ -1,5 +1,5 @@
 /**
- * @smartpaychain/otp-sdk
+ * @smart-pay-chain/otp
  *
  * Official TypeScript SDK for Smart Pay Chain OTP Verification Service
  *

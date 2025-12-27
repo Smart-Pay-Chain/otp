@@ -6,7 +6,7 @@
  * 2. Verify the OTP code
  */
 
-import { OtpClient, OtpChannel } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel } from '@smart-pay-chain/otp';
 
 async function basicExample() {
   // Initialize the client with your API key

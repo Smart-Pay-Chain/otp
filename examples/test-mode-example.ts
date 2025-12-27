@@ -5,7 +5,7 @@
  * Test mode allows you to test OTP flows without sending real SMS messages.
  */
 
-import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 async function testModeExample() {
   const client = new OtpClient({

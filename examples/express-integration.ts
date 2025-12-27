@@ -6,7 +6,7 @@
  */
 
 import express, { Request, Response, NextFunction } from 'express';
-import { OtpClient, OtpChannel, OtpError } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel, OtpError } from '@smart-pay-chain/otp';
 
 const app = express();
 app.use(express.json());

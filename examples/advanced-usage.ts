@@ -16,7 +16,7 @@ import {
   RateLimitError,
   OtpExpiredError,
   InvalidOtpError,
-} from '@smartpaychain/otp-sdk';
+} from '@smart-pay-chain/otp';
 
 async function advancedExample() {
   // Initialize with custom configuration

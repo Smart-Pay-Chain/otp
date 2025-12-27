@@ -1,6 +1,6 @@
 # Mobile App Integration Guide
 
-This guide shows how to integrate OTP verification in mobile applications using the @smartpaychain/otp-sdk.
+This guide shows how to integrate OTP verification in mobile applications using the @smart-pay-chain/otp.
 
 ## Architecture Overview
 
@@ -34,7 +34,7 @@ First, create backend endpoints using the OTP SDK:
 ```typescript
 // backend/routes/auth.ts
 import { Router } from 'express';
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const router = Router();
 const otpClient = new OtpClient({

@@ -1,6 +1,6 @@
 # Publishing Guide
 
-This guide explains how to publish the @smartpaychain/otp-sdk package to npm.
+This guide explains how to publish the @smart-pay-chain/otp package to npm.
 
 ## Prerequisites
 
@@ -145,7 +145,7 @@ npm org create smartpaychain
 2. **Set Package Access**:
 For scoped packages, set to public:
 ```bash
-npm access public @smartpaychain/otp-sdk
+npm access public @smart-pay-chain/otp
 ```
 
 ### Publish to npm
@@ -170,14 +170,14 @@ npm publish --tag beta --access public
 
 Users can install beta versions:
 ```bash
-npm install @smartpaychain/otp-sdk@beta
+npm install @smart-pay-chain/otp@beta
 ```
 
 ### Post-Publishing Steps
 
 1. **Verify Publication**:
 ```bash
-npm info @smartpaychain/otp-sdk
+npm info @smart-pay-chain/otp
 ```
 
 2. **Create Git Tag**:
@@ -267,19 +267,19 @@ Ensure version in `package.json` follows semver:
 You can only unpublish within 72 hours of publishing:
 
 ```bash
-npm unpublish @smartpaychain/otp-sdk@1.0.0
+npm unpublish @smart-pay-chain/otp@1.0.0
 ```
 
 To unpublish the entire package:
 
 ```bash
-npm unpublish @smartpaychain/otp-sdk --force
+npm unpublish @smart-pay-chain/otp --force
 ```
 
 **Better alternative**: Deprecate instead of unpublishing:
 
 ```bash
-npm deprecate @smartpaychain/otp-sdk@1.0.0 "This version has been deprecated. Please use 1.0.1+"
+npm deprecate @smart-pay-chain/otp@1.0.0 "This version has been deprecated. Please use 1.0.1+"
 ```
 
 ## CI/CD Automation

@@ -82,7 +82,7 @@ const testMode = await client.isTestMode();
 ## [1.0.0] - 2025-12-25
 
 ### Added
-- Initial release of @smartpaychain/otp-sdk
+- Initial release of @smart-pay-chain/otp
 - Support for sending OTPs via SMS, WhatsApp, and Voice channels
 - OTP verification with timing-safe comparison
 - OTP resending functionality

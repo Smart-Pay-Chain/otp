@@ -1,4 +1,4 @@
-# 🚀 @smartpaychain/otp-sdk v2.0.0 - Release Summary
+# 🚀 @smart-pay-chain/otp v2.0.0 - Release Summary
 
 ## ✅ Successfully Updated and Ready for Publishing
 
@@ -254,7 +254,7 @@ npm login
 npm publish --access public
 
 # 4. Verify publication
-npm info @smartpaychain/otp-sdk
+npm info @smart-pay-chain/otp
 
 # 5. Create git tag
 git tag v2.0.0
@@ -282,7 +282,7 @@ git push origin v2.0.0
 
 ### Backend (Express.js):
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const otpClient = new OtpClient({ apiKey: process.env.OTP_API_KEY });
 
@@ -384,7 +384,7 @@ const verifyOtp = async (requestId: string, code: string) => {
 ## 🔗 Quick Links
 
 - **Repository**: https://github.com/Smart-Pay-Chain/otp
-- **npm Package**: https://www.npmjs.com/package/@smartpaychain/otp-sdk
+- **npm Package**: https://www.npmjs.com/package/@smart-pay-chain/otp
 - **Documentation**: See README.md
 - **Examples**: See examples/ directory
 - **Issues**: https://github.com/Smart-Pay-Chain/otp/issues

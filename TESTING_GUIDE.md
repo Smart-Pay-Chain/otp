@@ -1,6 +1,6 @@
 # Testing Guide
 
-Complete guide for testing applications that use the @smartpaychain/otp-sdk.
+Complete guide for testing applications that use the @smart-pay-chain/otp.
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ TEST_MODE=true
 ### Checking Test Mode Status
 
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const client = new OtpClient({
   apiKey: process.env.OTP_API_KEY,
@@ -50,7 +50,7 @@ console.log('Test mode:', config.features.testMode);
 When test mode is enabled, use these special phone numbers:
 
 ```typescript
-import { TEST_PHONE_NUMBERS } from '@smartpaychain/otp-sdk';
+import { TEST_PHONE_NUMBERS } from '@smart-pay-chain/otp';
 
 // Always succeeds
 TEST_PHONE_NUMBERS.SUCCESS           // '+15005550006'
@@ -86,7 +86,7 @@ try {
 In test mode, all OTPs use a fixed code:
 
 ```typescript
-import { TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 const result = await client.sendOtp({
   phoneNumber: TEST_PHONE_NUMBERS.SUCCESS,
@@ -131,7 +131,7 @@ await client.verifyOtp({
 ### Example Test Suite
 
 ```typescript
-import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 describe('OTP Flow', () => {
   let client: OtpClient;
@@ -208,9 +208,9 @@ npm test -- --coverage
 ### Mocking the SDK
 
 ```typescript
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
-jest.mock('@smartpaychain/otp-sdk');
+jest.mock('@smart-pay-chain/otp');
 
 const mockClient = {
   sendOtp: jest.fn().mockResolvedValue({
@@ -257,7 +257,7 @@ global.fetch = jest.fn((url: string) => {
 ### Testing Against Real Backend (in Test Mode)
 
 ```typescript
-import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smartpaychain/otp-sdk';
+import { OtpClient, TEST_PHONE_NUMBERS, TEST_OTP_CODE } from '@smart-pay-chain/otp';
 
 describe('OTP Integration Tests', () => {
   let client: OtpClient;

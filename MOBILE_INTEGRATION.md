@@ -26,7 +26,7 @@ Mobile App → Your Backend API → OTP SDK → OTP Service
 
 ```typescript
 // backend/routes/auth.ts
-import { OtpClient } from '@smartpaychain/otp-sdk';
+import { OtpClient } from '@smart-pay-chain/otp';
 
 const otpClient = new OtpClient({
   apiKey: process.env.OTP_API_KEY,

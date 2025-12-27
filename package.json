@@ -1,6 +1,6 @@
 {
   "name": "@smart-pay-chain/otp",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Official TypeScript SDK for Smart Pay Chain OTP Verification Service - Now with test mode, mobile examples, and enhanced error handling",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

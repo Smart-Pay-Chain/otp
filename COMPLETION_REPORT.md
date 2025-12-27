@@ -2,13 +2,13 @@
 
 ## ✅ Project Successfully Completed
 
-The **@smartpaychain/otp-sdk** npm package has been created and is ready for publishing!
+The **@smart-pay-chain/otp** npm package has been created and is ready for publishing!
 
 ---
 
 ## 📦 Package Information
 
-- **Package Name**: `@smartpaychain/otp-sdk`
+- **Package Name**: `@smart-pay-chain/otp`
 - **Version**: 1.0.0
 - **License**: MIT
 - **Package Size**: 12.1 kB (compressed)
@@ -150,14 +150,14 @@ npm publish --tag beta --access public
 ### 4. Verify Publication
 
 ```bash
-npm info @smartpaychain/otp-sdk
+npm info @smart-pay-chain/otp
 ```
 
 ### 5. Test Installation
 
 ```bash
 # In a test project
-npm install @smartpaychain/otp-sdk
+npm install @smart-pay-chain/otp
 ```
 
 ---
@@ -165,7 +165,7 @@ npm install @smartpaychain/otp-sdk
 ## 📝 Usage Example
 
 ```typescript
-import { OtpClient, OtpChannel } from '@smartpaychain/otp-sdk';
+import { OtpClient, OtpChannel } from '@smart-pay-chain/otp';
 
 // Initialize
 const client = new OtpClient({

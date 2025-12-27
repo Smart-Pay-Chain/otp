@@ -1,6 +1,6 @@
 # API Reference
 
-Complete API reference for @smartpaychain/otp-sdk v2.0
+Complete API reference for @smart-pay-chain/otp v2.0
 
 ## Table of Contents
 
