@@ -30,7 +30,7 @@ describe('OtpClient', () => {
       expect(client).toBeInstanceOf(OtpClient);
       expect(mockedAxios.create).toHaveBeenCalledWith(
         expect.objectContaining({
-          baseURL: 'https://otp.smartpaychain.com',
+          baseURL: 'https://otp-service-production-ge.up.railway.app:3000',
           timeout: 30000,
           headers: expect.objectContaining({
             'X-API-Key': mockApiKey,
@@ -122,36 +122,27 @@ describe('OtpClient', () => {
         idempotencyKey,
       });
 
-      expect(mockAxiosInstance.post).toHaveBeenCalledWith(
-        '/api/v1/otp/send',
-        expect.any(Object),
-        {
-          headers: { 'X-Idempotency-Key': idempotencyKey },
-        }
-      );
+      expect(mockAxiosInstance.post).toHaveBeenCalledWith('/api/v1/otp/send', expect.any(Object), {
+        headers: { 'X-Idempotency-Key': idempotencyKey },
+      });
     });
 
     it('should validate phone number format', async () => {
-      await expect(
-        client.sendOtp({ phoneNumber: '1234567890' })
-      ).rejects.toThrow('Invalid phone number format');
+      await expect(client.sendOtp({ phoneNumber: '1234567890' })).rejects.toThrow(
+        'Invalid phone number format'
+      );
 
-      await expect(
-        client.sendOtp({ phoneNumber: '+' })
-      ).rejects.toThrow('Invalid phone number format');
+      await expect(client.sendOtp({ phoneNumber: '+' })).rejects.toThrow(
+        'Invalid phone number format'
+      );
 
-      await expect(
-        client.sendOtp({ phoneNumber: '+0555123456' })
-      ).rejects.toThrow('Invalid phone number format');
+      await expect(client.sendOtp({ phoneNumber: '+0555123456' })).rejects.toThrow(
+        'Invalid phone number format'
+      );
     });
 
     it('should accept valid E.164 phone numbers', async () => {
-      const validNumbers = [
-        '+1234567890',
-        '+995555123456',
-        '+12025551234',
-        '+442071234567',
-      ];
+      const validNumbers = ['+1234567890', '+995555123456', '+12025551234', '+442071234567'];
 
       for (const phoneNumber of validNumbers) {
         await client.sendOtp({ phoneNumber });
@@ -219,19 +210,19 @@ describe('OtpClient', () => {
     });
 
     it('should validate request ID', async () => {
-      await expect(
-        client.verifyOtp({ requestId: '', code: '123456' })
-      ).rejects.toThrow('Request ID is required');
+      await expect(client.verifyOtp({ requestId: '', code: '123456' })).rejects.toThrow(
+        'Request ID is required'
+      );
     });
 
     it('should validate code length', async () => {
-      await expect(
-        client.verifyOtp({ requestId: 'req_123', code: '123' })
-      ).rejects.toThrow('Code must be between 4 and 8 characters');
+      await expect(client.verifyOtp({ requestId: 'req_123', code: '123' })).rejects.toThrow(
+        'Code must be between 4 and 8 characters'
+      );
 
-      await expect(
-        client.verifyOtp({ requestId: 'req_123', code: '123456789' })
-      ).rejects.toThrow('Code must be between 4 and 8 characters');
+      await expect(client.verifyOtp({ requestId: 'req_123', code: '123456789' })).rejects.toThrow(
+        'Code must be between 4 and 8 characters'
+      );
     });
   });
 
@@ -268,10 +259,7 @@ describe('OtpClient', () => {
     });
 
     it('should validate request ID', async () => {
-      await expect(
-        client.resendOtp({ requestId: '' })
-      ).rejects.toThrow('Request ID is required');
+      await expect(client.resendOtp({ requestId: '' })).rejects.toThrow('Request ID is required');
     });
   });
 });
-

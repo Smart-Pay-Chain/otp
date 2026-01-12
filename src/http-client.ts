@@ -1,5 +1,11 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig } from 'axios';
-import { OtpClientConfig, ApiErrorResponse, ApiSuccessResponse, SdkPlatform, SdkLanguage } from './types';
+import {
+  OtpClientConfig,
+  ApiErrorResponse,
+  ApiSuccessResponse,
+  SdkPlatform,
+  SdkLanguage,
+} from './types';
 import { OtpError } from './errors';
 
 // SDK version - update this with each release
@@ -65,7 +71,7 @@ export class HttpClient {
     this.language = config.language || detectLanguage();
 
     this.client = axios.create({
-      baseURL: config.baseUrl || 'https://otp.smartpaychain.com',
+      baseURL: config.baseUrl || 'https://otp-service-production-ge.up.railway.app:3000',
       timeout: config.timeout || 30000,
       headers: {
         'Content-Type': 'application/json',
@@ -150,4 +156,3 @@ export class HttpClient {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
-
