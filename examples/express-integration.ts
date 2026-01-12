@@ -3,17 +3,30 @@
  *
  * This example shows how to integrate the OTP SDK into an Express.js application
  * for user authentication workflows.
+ *
+ * Use Case: You have your own API key and want to add OTP verification to your app
+ *
+ * For backend integration with sms-service (phone auth + JWT tokens),
+ * see: phone-authentication.ts
  */
 
 import express, { Request, Response, NextFunction } from 'express';
-import { OtpClient, OtpChannel, OtpError } from '@smart-pay-chain/otp';
+import {
+  OtpClient,
+  OtpChannel,
+  OtpError,
+  InvalidOtpError,
+  OtpExpiredError,
+  RateLimitError,
+} from '@smart-pay-chain/otp';
 
 const app = express();
 app.use(express.json());
 
-// Initialize OTP client
+// Initialize OTP client with auto-configuration (v2.0+)
 const otpClient = new OtpClient({
   apiKey: process.env.OTP_API_KEY || 'your-api-key-here',
+  autoConfig: true, // Auto-fetch server configuration
 });
 
 // In-memory store for demo purposes (use Redis in production)
@@ -139,6 +152,26 @@ app.post('/api/auth/verify-otp', async (req: Request, res: Response, next: NextF
       });
     }
   } catch (error) {
+    // Handle specific OTP errors (v2.0+)
+    if (error instanceof InvalidOtpError) {
+      return res.status(400).json({
+        success: false,
+        error: 'Invalid OTP code. Please try again.',
+      });
+    }
+    if (error instanceof OtpExpiredError) {
+      otpSessions.delete(phoneNumber);
+      return res.status(400).json({
+        success: false,
+        error: 'OTP has expired. Please request a new one.',
+      });
+    }
+    if (error instanceof RateLimitError) {
+      return res.status(429).json({
+        success: false,
+        error: 'Too many attempts. Please try again later.',
+      });
+    }
     next(error);
   }
 });
@@ -195,7 +228,7 @@ app.post('/api/auth/resend-otp', async (req: Request, res: Response, next: NextF
 /**
  * Error handling middleware
  */
-app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((error: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error('Error:', error);
 
   if (error instanceof OtpError) {
@@ -226,4 +259,3 @@ app.listen(PORT, () => {
 });
 
 export default app;
-
