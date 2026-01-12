@@ -214,10 +214,10 @@ export class OtpClient {
 
   /**
    * Get OTP status with code (public endpoint for testing/development)
-   * 
+   *
    * ⚠️ WARNING: This endpoint returns the actual OTP code and should ONLY be used
    * in development/testing environments! Never use in production client code.
-   * 
+   *
    * This method polls for up to 30 seconds waiting for SMS delivery.
    *
    * @param requestId - The request ID from sendOtp()
@@ -236,9 +236,7 @@ export class OtpClient {
       throw new Error('Request ID is required');
     }
 
-    const response = await this.http.get<OtpStatusWithCode>(
-      `/api/v1/otp/${requestId}/status`
-    );
+    const response = await this.http.get<OtpStatusWithCode>(`/api/v1/otp/${requestId}/status`);
 
     // Convert string dates to Date objects
     return {
@@ -251,7 +249,7 @@ export class OtpClient {
 
   /**
    * Get SDK configuration from server
-   * 
+   *
    * Fetches and caches configuration from the server. The configuration includes
    * rate limits, supported features, test mode status, and more. Results are
    * cached for 1 hour.
@@ -325,7 +323,7 @@ export class OtpClient {
 
   /**
    * Check if server is in test mode
-   * 
+   *
    * @returns Promise resolving to true if test mode is enabled
    *
    * @example
@@ -347,7 +345,7 @@ export class OtpClient {
 
   /**
    * Generate a unique idempotency key
-   * 
+   *
    * @returns A unique idempotency key in the format `{timestamp}-{random}`
    */
   private generateIdempotencyKey(): string {
@@ -362,10 +360,7 @@ export class OtpClient {
   private validatePhoneNumber(phoneNumber: string): void {
     const e164Regex = /^\+[1-9]\d{1,14}$/;
     if (!e164Regex.test(phoneNumber)) {
-      throw new Error(
-        'Invalid phone number format. Must be in E.164 format (e.g., +995555123456)'
-      );
+      throw new Error('Invalid phone number format. Must be in E.164 format (e.g., +995555123456)');
     }
   }
 }
-
