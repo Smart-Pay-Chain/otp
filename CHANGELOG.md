@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-01-13
+
+### Added
+- **Phone Authentication Integration**: Complete example for passwordless authentication with JWT tokens
+- **Backend Integration Guide**: Comprehensive guide for integrating with sms-service backend
+  - Phone registration and login flows
+  - JWT token management (access + refresh tokens)
+  - API key handling and security
+  - Admin role documentation
+  - Brand management workflow
+  - Response structure documentation
+- **New Example**: `phone-authentication.ts` - Complete Express.js backend with:
+  - Registration endpoint with OTP
+  - Login endpoint with OTP
+  - OTP verification with JWT generation
+  - Token refresh endpoint
+  - Protected route example
+  - API key secret handling for new accounts
+- **Documentation Updates**:
+  - Updated `examples/README.md` with phone authentication example
+  - Added `BACKEND_INTEGRATION_GUIDE.md` with complete backend integration
+  - Updated main `README.md` with new features and examples
+
+### Changed
+- Updated README to reflect new v2.1 features
+- Enhanced examples documentation with phone authentication section
+
+### Security
+- **API Key Handling**: Documented one-time secret reveal for new accounts
+- **Token Security**: Best practices for JWT token storage (httpOnly cookies)
+- **Admin RBAC**: Role-based access control documentation
+
+### Documentation
+- Complete backend API endpoint reference
+- Response structure types and examples
+- Security best practices for production
+- Admin role capabilities and configuration
+- Brand approval workflow documentation
+- Cypress test mode configuration
+
+---
+
 ## [2.0.0] - 2025-12-28
 
 ### Added

@@ -20,6 +20,14 @@
 
 Send and verify one-time passwords via SMS, WhatsApp, and Voice with ease.
 
+## What's New in v2.1
+
+🆕 **Phone Authentication** - Complete passwordless auth with JWT tokens  
+🆕 **Admin Role Support** - RBAC with USER/ADMIN roles  
+🆕 **Brand Management** - Two-stage brand approval workflow  
+🆕 **API Key Handling** - Secure key generation and one-time secret reveal  
+🆕 **Backend Integration** - Full guide for sms-service integration  
+
 ## What's New in v2.0
 
 🆕 **Test Mode** - Development-friendly testing with fixed OTP codes and test phone numbers  
@@ -38,6 +46,9 @@ Send and verify one-time passwords via SMS, WhatsApp, and Voice with ease.
 🎯 **Type-Safe** - Full TypeScript support with comprehensive type definitions  
 🔄 **Retry Logic** - Automatic retries for transient failures  
 📱 **Mobile Ready** - React Native example and mobile integration guide  
+🔐 **Phone Authentication** - Complete passwordless auth with JWT tokens  
+👥 **Admin Support** - Role-based access control (RBAC)  
+🏢 **Brand Management** - Two-stage approval workflow  
 🧪 **Test Mode** - Development testing with fixed codes  
 📦 **Lightweight** - Minimal dependencies  
 🧪 **Well-Tested** - Comprehensive test coverage  
@@ -489,9 +500,11 @@ The SDK includes comprehensive examples:
 - **[Advanced Usage](./examples/advanced-usage.ts)** - Error handling, metadata, retries
 - **[Test Mode](./examples/test-mode-example.ts)** 🆕 - Testing with fixed OTP codes
 - **[Express Integration](./examples/express-integration.ts)** - Backend API with Express.js
+- **[Phone Authentication](./examples/phone-authentication.ts)** 🆕 - Complete passwordless auth with JWT
 - **[React Integration](./examples/react-example.tsx)** - Frontend form with React
 - **[React Native](./examples/react-native-example.tsx)** 🆕 - Mobile app integration
 - **[Mobile Apps Guide](./examples/MOBILE_APPS.md)** 🆕 - Flutter, iOS, Android examples
+- **[Backend Integration Guide](./BACKEND_INTEGRATION_GUIDE.md)** 🆕 - Full sms-service integration
 
 See the [examples directory](./examples/) for more details.
 

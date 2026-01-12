@@ -82,7 +82,24 @@ Complete mobile app OTP verification component.
 - Loading states
 - Mobile-specific UX patterns
 
-### 7. Mobile Apps Guide (`MOBILE_APPS.md`) 🆕
+### 7. Phone Authentication (`phone-authentication.ts`) 🆕
+Complete passwordless authentication flow with JWT tokens.
+
+```bash
+npm install axios
+ts-node examples/phone-authentication.ts
+```
+
+**What it demonstrates:**
+- Phone number registration with OTP
+- Phone login with OTP
+- JWT token management (access + refresh)
+- API key handling for new users
+- Protected route authentication
+- Token refresh flow
+- Secure cookie handling
+
+### 8. Mobile Apps Guide (`MOBILE_APPS.md`) 🆕
 Comprehensive guide for mobile app integration.
 
 **What it covers:**
