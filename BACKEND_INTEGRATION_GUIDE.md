@@ -4,6 +4,10 @@
 
 This guide covers integrating your application with the Smart Pay Chain OTP backend (`sms-service`), which provides phone-based authentication with JWT tokens and API key management.
 
+**Backend URLs:**
+- Production: `https://otp-service-production-ge.up.railway.app`
+- Local Development: `http://localhost:3000`
+
 ## Table of Contents
 
 - [Phone Authentication Flow](#phone-authentication-flow)

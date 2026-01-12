@@ -20,7 +20,8 @@ const app = express();
 app.use(express.json());
 
 // Your backend API URL (sms-service)
-const BACKEND_API_URL = process.env.BACKEND_API_URL || 'http://localhost:3000/api/v1';
+const BACKEND_API_URL =
+  process.env.BACKEND_API_URL || 'https://otp-service-production-ge.up.railway.app/api/v1';
 
 /**
  * Response types from the backend
