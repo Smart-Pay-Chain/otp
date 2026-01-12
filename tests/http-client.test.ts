@@ -32,8 +32,8 @@ describe('HttpClient', () => {
         timeout: 30000,
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': 'test-key',
-          'X-OTP-SDK-Version': '2.1.5',
+          Authorization: 'Bearer test-key',
+          'X-OTP-SDK-Version': '2.1.6',
           'X-OTP-SDK-Platform': 'node',
           'X-OTP-SDK-Language': 'typescript',
         },
@@ -54,8 +54,8 @@ describe('HttpClient', () => {
         timeout: 60000,
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': 'test-key',
-          'X-OTP-SDK-Version': '2.1.5',
+          Authorization: 'Bearer test-key',
+          'X-OTP-SDK-Version': '2.1.6',
           'X-OTP-SDK-Platform': 'node',
           'X-OTP-SDK-Language': 'typescript',
           'X-Custom': 'value',

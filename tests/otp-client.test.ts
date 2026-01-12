@@ -33,7 +33,7 @@ describe('OtpClient', () => {
           baseURL: 'https://otp-service-production-ge.up.railway.app',
           timeout: 30000,
           headers: expect.objectContaining({
-            'X-API-Key': mockApiKey,
+            Authorization: `Bearer ${mockApiKey}`,
           }),
         })
       );

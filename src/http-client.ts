@@ -9,7 +9,7 @@ import {
 import { OtpError } from './errors';
 
 // SDK version - update this with each release
-const SDK_VERSION = '2.1.5';
+const SDK_VERSION = '2.1.6';
 
 /**
  * Detect the current platform
@@ -75,7 +75,7 @@ export class HttpClient {
       timeout: config.timeout || 30000,
       headers: {
         'Content-Type': 'application/json',
-        'X-API-Key': config.apiKey,
+        Authorization: `Bearer ${config.apiKey}`,
         'X-OTP-SDK-Version': SDK_VERSION,
         'X-OTP-SDK-Platform': this.platform,
         'X-OTP-SDK-Language': this.language,
