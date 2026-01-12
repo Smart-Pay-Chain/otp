@@ -33,7 +33,7 @@ describe('HttpClient', () => {
         headers: {
           'Content-Type': 'application/json',
           Authorization: 'Bearer test-key',
-          'X-OTP-SDK-Version': '2.1.6',
+          'X-OTP-SDK-Version': '2.1.7',
           'X-OTP-SDK-Platform': 'node',
           'X-OTP-SDK-Language': 'typescript',
         },
@@ -55,7 +55,7 @@ describe('HttpClient', () => {
         headers: {
           'Content-Type': 'application/json',
           Authorization: 'Bearer test-key',
-          'X-OTP-SDK-Version': '2.1.6',
+          'X-OTP-SDK-Version': '2.1.7',
           'X-OTP-SDK-Platform': 'node',
           'X-OTP-SDK-Language': 'typescript',
           'X-Custom': 'value',

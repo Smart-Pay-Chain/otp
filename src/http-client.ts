@@ -9,7 +9,7 @@ import {
 import { OtpError } from './errors';
 
 // SDK version - update this with each release
-const SDK_VERSION = '2.1.6';
+const SDK_VERSION = '2.1.7';
 
 /**
  * Detect the current platform

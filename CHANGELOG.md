@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.6] - 2026-01-13
+## [2.1.7] - 2026-01-13
 
 ### Fixed
 - **CRITICAL**: Changed authentication header from `X-API-Key` to `Authorization: Bearer {apiKey}`
@@ -13,7 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixes "Authorization header is required" errors
 
 ### Why This Update Is Important
-The backend expects API keys in the `Authorization: Bearer {key}` format, but the SDK was sending `X-API-Key: {key}`. This version fixes the authentication to work correctly with the backend.
+Version 2.1.6 on npm had a critical bug where the SDK was sending `X-API-Key` header instead of `Authorization: Bearer`. This version (2.1.7) contains the actual fix. **Please upgrade from 2.1.6 immediately.**
+
+---
+
+## [2.1.6] - 2026-01-13
+
+### ⚠️ DEPRECATED - Do not use
+This version was published with a critical authentication bug. Please use 2.1.7 instead.
 
 ---
 
