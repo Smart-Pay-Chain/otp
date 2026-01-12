@@ -172,7 +172,7 @@ All examples use the following environment variables:
 
 ## Notes
 
-- Replace `+995555123456` with actual phone numbers when testing
+- Use `+995568000865` for testing (configured test phone number)
 - The Express example uses in-memory storage for demo purposes. Use Redis in production.
 - The React example assumes you have backend endpoints set up.
 - All examples include proper TypeScript types for better developer experience.

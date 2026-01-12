@@ -287,10 +287,15 @@ export class OtpClient {
 
     // Log warning if test mode is enabled
     if (config.features.testMode) {
-      console.warn(
-        '⚠️  Test mode is enabled on the server. Use test phone numbers for testing:',
-        config.testMode?.testPhoneNumbers
-      );
+      const testPhones = config.testMode?.testPhoneNumbers;
+      if (testPhones && testPhones.length > 0) {
+        console.warn(
+          '⚠️  Test mode is enabled on the server. Use test phone numbers:',
+          testPhones.join(', ')
+        );
+      } else {
+        console.warn('⚠️  Test mode is enabled on the server.');
+      }
     }
 
     return config;

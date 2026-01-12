@@ -18,7 +18,7 @@ async function basicExample() {
     // Step 1: Send an OTP
     console.log('Sending OTP...');
     const sendResult = await client.sendOtp({
-      phoneNumber: '+995555123456',
+      phoneNumber: '+995568000865', // Your test phone number
       channel: OtpChannel.SMS,
       ttl: 300, // 5 minutes
       length: 6,

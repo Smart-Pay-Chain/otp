@@ -79,7 +79,7 @@ const client = new OtpClient({
 
 // Send an OTP
 const result = await client.sendOtp({
-  phoneNumber: '+995555123456',
+  phoneNumber: '+995568000865',
   channel: OtpChannel.SMS,
 });
 
@@ -189,7 +189,7 @@ Send an OTP to a phone number using your preferred channel:
 
 ```typescript
 const result = await client.sendOtp({
-  phoneNumber: '+995555123456',    // Required: E.164 format
+  phoneNumber: '+995568000865',    // Required: E.164 format
   channel: OtpChannel.SMS,          // Optional: SMS, WHATSAPP, or VOICE
   ttl: 300,                         // Optional: Time-to-live (60-600 seconds)
   length: 6,                        // Optional: Code length (4-8 digits)
@@ -292,7 +292,7 @@ router.post('/auth/send-otp', async (req, res) => {
 // Mobile app calls your backend
 fetch('https://yourapi.com/auth/send-otp', {
   method: 'POST',
-  body: JSON.stringify({ phoneNumber: '+995555123456' }),
+  body: JSON.stringify({ phoneNumber: '+995568000865' }),
 });
 ```
 
@@ -346,13 +346,13 @@ The SDK automatically generates unique idempotency keys for send/resend operatio
 ```typescript
 // Automatic idempotency (recommended)
 const result = await client.sendOtp({
-  phoneNumber: '+995555123456',
+  phoneNumber: '+995568000865',
   // SDK auto-generates: X-Idempotency-Key: {timestamp}-{random}
 });
 
 // Manual idempotency key (for custom requirements)
 const result = await client.sendOtp({
-  phoneNumber: '+995555123456',
+  phoneNumber: '+995568000865',
   idempotencyKey: 'my-unique-key-123',
 });
 ```

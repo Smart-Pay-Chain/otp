@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2026-01-13
+
+### Fixed
+- Improved test mode console warning to handle undefined test phone numbers gracefully
+- No longer displays "undefined" when test phone numbers are not available
+
+### Changed
+- Updated all examples to use actual test phone number `+995568000865`
+- Enhanced HTTP client test coverage from 64% to 86%
+
+---
+
+## [2.1.1] - 2026-01-13
+
+### Added
+- Enhanced HTTP client tests for retry logic and error handling
+- Tests for retryable vs non-retryable errors
+- Tests for response interceptor functionality
+
+### Improved
+- HTTP client test coverage: 64.44% → 86.66%
+- Better error handling test scenarios
+
+---
+
 ## [2.1.0] - 2026-01-13
 
 ### Added

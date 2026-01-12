@@ -34,7 +34,7 @@ async function advancedExample() {
     // Send OTP with metadata and idempotency key
     console.log('Sending OTP with metadata...');
     const sendResult = await client.sendOtp({
-      phoneNumber: '+995555123456',
+      phoneNumber: '+995568000865', // Your test phone number
       channel: OtpChannel.WHATSAPP,
       ttl: 600, // 10 minutes
       length: 8,
