@@ -49,7 +49,7 @@ describe('SDK Configuration', () => {
           batchOperations: false,
         },
         endpoints: {
-          base: 'https://otp-service-production-ge.up.railway.app:3000',
+          base: 'https://otp-service-production-ge.up.railway.app',
           docs: 'https://docs.smartpaychain.com',
           status: 'https://status.smartpaychain.com',
         },

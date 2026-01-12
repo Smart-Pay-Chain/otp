@@ -30,7 +30,7 @@ describe('OtpClient', () => {
       expect(client).toBeInstanceOf(OtpClient);
       expect(mockedAxios.create).toHaveBeenCalledWith(
         expect.objectContaining({
-          baseURL: 'https://otp-service-production-ge.up.railway.app:3000',
+          baseURL: 'https://otp-service-production-ge.up.railway.app',
           timeout: 30000,
           headers: expect.objectContaining({
             'X-API-Key': mockApiKey,

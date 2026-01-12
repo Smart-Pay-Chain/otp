@@ -73,7 +73,7 @@ export interface OtpClientConfig {
   /** Your API key for authentication */
   apiKey: string;
 
-  /** Base URL of the OTP service (default: https://otp-service-production-ge.up.railway.app:3000) */
+  /** Base URL of the OTP service (default: https://otp-service-production-ge.up.railway.app) */
   baseUrl?: string;
 
   /** Request timeout in milliseconds (default: 30000) */

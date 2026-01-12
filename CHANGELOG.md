@@ -10,10 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Improved test mode console warning to handle undefined test phone numbers gracefully
 - No longer displays "undefined" when test phone numbers are not available
+- **Fixed default baseURL to remove incorrect `:3000` port** (Railway doesn't use explicit ports)
 
 ### Changed
 - Updated all examples to use actual test phone number `+995568000865`
 - Enhanced HTTP client test coverage from 64% to 86%
+- **Default backend URL**: `https://otp-service-production-ge.up.railway.app`
+- **Phone authentication example** now defaults to Railway production
+- Updated all documentation and tests to use correct Railway URL
+
+### Added
+- **New example**: `test-railway-backend.ts` - Automated Railway backend testing script
+- Better documentation of production vs local URLs in integration guide
 
 ---
 

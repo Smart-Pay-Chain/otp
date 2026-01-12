@@ -22,7 +22,7 @@ async function advancedExample() {
   // Initialize with custom configuration
   const client = new OtpClient({
     apiKey: process.env.OTP_API_KEY || 'your-api-key-here',
-    baseUrl: 'https://otp-service-production-ge.up.railway.app:3000', // Optional: custom base URL
+    baseUrl: 'https://otp-service-production-ge.up.railway.app', // Optional: custom base URL
     timeout: 60000, // 60 seconds
     maxRetries: 3,
     headers: {

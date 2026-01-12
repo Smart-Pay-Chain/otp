@@ -71,7 +71,7 @@ export class HttpClient {
     this.language = config.language || detectLanguage();
 
     this.client = axios.create({
-      baseURL: config.baseUrl || 'https://otp-service-production-ge.up.railway.app:3000',
+      baseURL: config.baseUrl || 'https://otp-service-production-ge.up.railway.app',
       timeout: config.timeout || 30000,
       headers: {
         'Content-Type': 'application/json',

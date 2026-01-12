@@ -28,7 +28,7 @@ describe('HttpClient', () => {
       new HttpClient({ apiKey: 'test-key' });
 
       expect(mockedAxios.create).toHaveBeenCalledWith({
-        baseURL: 'https://otp-service-production-ge.up.railway.app:3000',
+        baseURL: 'https://otp-service-production-ge.up.railway.app',
         timeout: 30000,
         headers: {
           'Content-Type': 'application/json',

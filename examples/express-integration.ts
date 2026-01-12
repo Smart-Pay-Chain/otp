@@ -27,6 +27,7 @@ app.use(express.json());
 const otpClient = new OtpClient({
   apiKey: process.env.OTP_API_KEY || 'your-api-key-here',
   autoConfig: true, // Auto-fetch server configuration
+  // baseUrl: 'https://otp-service-production-ge.up.railway.app', // Optional: defaults to Railway production
 });
 
 // In-memory store for demo purposes (use Redis in production)
